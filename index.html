@@ -1,1 +1,1012 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>James | Full Stack Web Developer, ChatBot Developer, RAG apps Developer</title><meta name="title" content="James | Full Stack Web Developer, ChatBot Developer, RAG apps Developer"><meta name="description" content="I am a full stack web developer with experience in building web applications using different frameworks. I am also a chatbot developer with expertise in building chatbots using Dialogflow CX, Python, Flask/FastAPI. I have experience in building RAG apps using Google Gemini/OpenAI, Langchain, LangGraph and Python. I am passionate about learning new technologies and improving my skills."><meta name="keywords" content="James, Full Stack Web Developer, ChatBot Developer, RAG apps Developer, Dialogflow CX"><meta name="author" content="James"><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:url" content="https://james.al/"><meta property="og:title" content="James | Full Stack Web Developer, ChatBot Developer, RAG apps Developer"><meta property="og:description" content="I am a full stack web developer with experience in building web applications using different frameworks. I am also a chatbot developer with expertise in building chatbots using Dialogflow CX, Python, Flask/FastAPI. I have experience in building RAG apps using Google Gemini/OpenAI, Langchain, LangGraph and Python. I am passionate about learning new technologies and improving my skills."><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://james.al/"><meta property="twitter:title" content="DeveloperFolio | Developer Portfolio Template"><meta property="twitter:description" content="Software Developer Portfolio Template that helps you showcase your work and skills as a software developer"><meta name="msapplication-TileColor" content="#603cba"><meta name="theme-color" content="#6c63ff"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v8=qAJ44G5Bm7"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v8=qAJ44G5Bm7"><link rel="mask-icon" href="/safari-pinned-tab.svg?v8=qAJ44G5Bm7" color="#885bd5"><link rel="shortcut icon" href="/favicon.ico?v8=qAJ44G5Bm7"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v8=qAJ44G5Bm7"><link rel="manifest" href="/manifest.json"/><link rel="preload" href="/static/media/Montserrat-Regular.ee653992.ttf" as="font" type="font/woff" crossorigin><link rel="preload" href="/static/media/Agustina.21f233e1.woff" as="font" type="font/woff" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.4/css/all.min.css"><script defer="defer" src="/static/js/main.b9c3be52.js"></script><link href="/static/css/main.9c9afc7d.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>James Mascarenhas | Generative AI Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --bg: #0f172a;
+      --bg2: #1e293b;
+      --bg3: #334155;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --gradient: linear-gradient(135deg, #38bdf8, #818cf8);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(15,23,42,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    .nav-logo {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.2rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+
+    .nav-links { display: flex; gap: 1.8rem; list-style: none; }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56,189,248,0.1), transparent),
+                  radial-gradient(ellipse 60% 40% at 80% 80%, rgba(129,140,248,0.08), transparent);
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.3);
+      color: var(--accent);
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      border-radius: 99px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.1em;
+    }
+
+    .hero-name {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero-name span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-summary {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.8;
+    }
+
+    .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+
+    .btn {
+      padding: 0.75rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: #fff;
+    }
+
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(56,189,248,0.3); }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    .hero-contacts {
+      display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
+    }
+
+    .contact-chip {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 0.4rem 1rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .contact-chip:hover { border-color: var(--accent); color: var(--accent); }
+    .contact-chip i { color: var(--accent); font-size: 0.85rem; }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 2rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-line {
+      width: 60px; height: 3px;
+      background: var(--gradient);
+      border-radius: 3px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--bg2); }
+
+    .skills-intro {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .skill-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(56,189,248,0.1);
+    }
+
+    .skill-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .skill-name {
+      font-weight: 600; font-size: 0.9rem; color: var(--text);
+    }
+
+    .skill-years {
+      background: rgba(56,189,248,0.1);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-family: 'Fira Code', monospace;
+      padding: 0.2rem 0.6rem;
+      border-radius: 99px;
+    }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    .tag {
+      background: var(--bg3);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-family: 'Fira Code', monospace;
+      transition: all 0.2s;
+    }
+
+    .tag:hover { background: rgba(56,189,248,0.15); color: var(--accent); }
+
+    /* ── EXPERIENCE ── */
+    #experience { background: var(--bg); }
+
+    .timeline { position: relative; padding-left: 2rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute; left: 6px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--accent2), transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+      position: absolute; left: -2rem; top: 6px;
+      width: 14px; height: 14px;
+      background: var(--gradient);
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
+    }
+
+    .exp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem;
+      transition: all 0.3s;
+    }
+
+    .exp-card:hover {
+      border-color: rgba(56,189,248,0.4);
+      box-shadow: 0 8px 30px rgba(56,189,248,0.08);
+    }
+
+    .exp-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .exp-company {
+      font-size: 1.05rem; font-weight: 700; color: var(--text);
+    }
+
+    .exp-period {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      color: var(--accent);
+      background: rgba(56,189,248,0.08);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .exp-role {
+      font-size: 0.85rem;
+      color: var(--accent2);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .exp-list { list-style: none; padding: 0; }
+
+    .exp-list li {
+      position: relative;
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.7;
+    }
+
+    .exp-list li::before {
+      content: '▸';
+      position: absolute; left: 0;
+      color: var(--accent);
+    }
+
+    /* ── PROJECTS ── */
+    #projects { background: var(--bg2); }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem;
+      transition: all 0.3s;
+      display: flex; flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: rgba(129,140,248,0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(129,140,248,0.1);
+    }
+
+    .project-icon {
+      width: 44px; height: 44px;
+      background: rgba(129,140,248,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .project-title {
+      font-size: 1rem; font-weight: 700;
+      margin-bottom: 0.5rem; color: var(--text);
+    }
+
+    .project-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      color: var(--accent2);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: gap 0.2s;
+    }
+
+    .project-link:hover { gap: 0.7rem; color: var(--accent); }
+
+    /* ── CERTIFICATIONS ── */
+    #certifications { background: var(--bg); }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .cert-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .cert-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 6px 20px rgba(56,189,248,0.1);
+    }
+
+    .cert-issuer {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .cert-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-name a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px dashed var(--border);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .cert-name a:hover { color: var(--accent); border-color: var(--accent); }
+
+    .cert-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── EDUCATION ── */
+    #education { background: var(--bg2); }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .edu-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+      transition: all 0.3s;
+    }
+
+    .edu-card:hover { border-color: var(--accent2); }
+
+    .edu-icon {
+      width: 42px; height: 42px; min-width: 42px;
+      background: rgba(129,140,248,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent2);
+      font-size: 1rem;
+    }
+
+    .edu-degree {
+      font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 0.2rem;
+    }
+
+    .edu-school {
+      font-size: 0.82rem; color: var(--text-muted);
+    }
+
+    .edu-year {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem; color: var(--accent);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-name {
+      font-size: 1.4rem; font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-tagline { color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
+
+    .footer-links { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover { color: var(--accent); }
+
+    .footer-copy { font-size: 0.78rem; color: var(--bg3); }
+
+    /* ── SCROLL-TO-TOP ── */
+    #scrollTop {
+      position: fixed; bottom: 2rem; right: 2rem;
+      width: 42px; height: 42px;
+      background: var(--gradient);
+      border: none; border-radius: 50%;
+      color: #fff; font-size: 1rem;
+      cursor: pointer;
+      display: none;
+      align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(56,189,248,0.3);
+      transition: transform 0.2s;
+      z-index: 999;
+    }
+
+    #scrollTop:hover { transform: scale(1.1); }
+    #scrollTop.show { display: flex; }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 2rem;
+        gap: 1rem;
+      }
+
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+
+      .timeline { padding-left: 1rem; }
+      .timeline-dot { left: -1.4rem; }
+      .exp-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">&lt;James.AL /&gt;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content fade-in">
+    <div class="hero-badge">⚡ Open to Opportunities</div>
+    <h1 class="hero-name">James <span>Mascarenhas</span></h1>
+    <p class="hero-title">Generative AI Developer &nbsp;|&nbsp; Full Stack Engineer</p>
+    <p class="hero-summary">
+      Full Stack Web Developer with 10+ years of experience building scalable WordPress websites,
+      web applications, backend systems and AI-powered chatbots. Skilled at translating business
+      requirements into robust technical solutions across cloud platforms and modern frameworks.
+    </p>
+    <div class="hero-buttons">
+      <a href="#experience" class="btn btn-primary"><i class="fas fa-briefcase"></i> View Experience</a>
+      <a href="#projects" class="btn btn-outline"><i class="fas fa-code"></i> See Projects</a>
+    </div>
+    <div class="hero-contacts">
+      <a href="mailto:Hello@James.AL" class="contact-chip"><i class="fas fa-envelope"></i> Hello@James.AL</a>
+      <a href="mailto:engg.james@gmail.com" class="contact-chip"><i class="fab fa-google"></i> engg.james@gmail.com</a>
+      <a href="https://www.james.al" target="_blank" class="contact-chip"><i class="fas fa-globe"></i> www.james.al</a>
+      <a href="tel:+919643179910" class="contact-chip"><i class="fas fa-phone"></i> +91-9643179910</a>
+      <a href="#" class="contact-chip"><i class="fas fa-location-dot"></i> Gurgaon, Haryana</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="container">
+    <p class="section-label fade-in">// expertise</p>
+    <h2 class="section-title fade-in">Technical Skills</h2>
+    <div class="section-line fade-in"></div>
+    <p class="skills-intro fade-in">
+      Strong written and verbal communication; ability to bridge business needs with technical execution;
+      skilled at simplifying complex concepts for non-technical stakeholders.
+    </p>
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">🗄️ Databases</span>
+          <span class="skill-years">7 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Vector DBs</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">💻 Programming Languages</span>
+          <span class="skill-years">5 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">🧩 Frameworks & Libraries</span>
+          <span class="skill-years">5 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Flask</span><span class="tag">FastAPI</span><span class="tag">Django</span>
+          <span class="tag">React.js</span><span class="tag">Angular</span><span class="tag">Next.js</span>
+          <span class="tag">Express.js</span><span class="tag">Laravel</span><span class="tag">CodeIgniter</span>
+          <span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">CopilotKit</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">☁️ Cloud Platforms</span>
+          <span class="skill-years">5 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Azure</span><span class="tag">Firebase</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">🔀 Version Control</span>
+          <span class="skill-years">5 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Git</span><span class="tag">GitHub</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">🐳 Containerization / CI-CD</span>
+          <span class="skill-years">5 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-header">
+          <span class="skill-name">🤖 LLM / AI Tooling</span>
+          <span class="skill-years">3 yrs</span>
+        </div>
+        <div class="skill-tags">
+          <span class="tag">OpenAI APIs</span><span class="tag">Google Gemini APIs</span>
+          <span class="tag">Hugging Face</span><span class="tag">CopilotKit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label fade-in">// career</p>
+    <h2 class="section-title fade-in">Work Experience</h2>
+    <div class="section-line fade-in"></div>
+    <div class="timeline">
+
+      <!-- USPS -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">USPS &nbsp;<span style="color:var(--text-muted);font-weight:400;font-size:0.85rem">· Remote, Contractual</span></div>
+            <div class="exp-period">11/2023 – Present</div>
+          </div>
+          <div class="exp-role">AI ChatBot Developer (Google Dialogflow CX)</div>
+          <ul class="exp-list">
+            <li>Led the successful migration of legacy chatbots from Dialogflow ES to Dialogflow CX within a 12-month timeframe, modernizing the conversational AI platform.</li>
+            <li>Redesigned and implemented complex conversation flows using Dialogflow CX's state machine architecture for improved scalability and maintainability.</li>
+            <li>Developed Flask-based RESTful APIs using Python and Flask to interface with the chatbot, enabling dynamic user interactions and delivering context-aware responses.</li>
+            <li>Integrated Generative AI into Dialogflow CX using webhook calls to Google Vertex AI's Generative API, enabling more natural and engaging customer conversations.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Outlier.io -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">Outlier.io &nbsp;<span style="color:var(--text-muted);font-weight:400;font-size:0.85rem">· Remote, Freelance</span></div>
+            <div class="exp-period">03/2023 – 05/2024</div>
+          </div>
+          <div class="exp-role">AI Chatbot Quality Evaluator</div>
+          <ul class="exp-list">
+            <li>Generated diverse, domain-specific prompts and evaluated LLM-generated responses across key quality metrics including factual accuracy, instruction adherence, formatting, verbosity, and safety.</li>
+            <li>Annotated and corrected model outputs to provide high-quality training signals for iterative fine-tuning of large language models (LLMs).</li>
+            <li>Focused on enhancing a Hindi-language LLM, with particular attention to improving grammar, syntactic correctness, and linguistic fluency.</li>
+            <li>Contributed to the continuous improvement of model performance by identifying response patterns, edge cases, and areas for linguistic optimization.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bonton Opticians -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">Bonton Opticians &nbsp;<span style="color:var(--text-muted);font-weight:400;font-size:0.85rem">· Delhi</span></div>
+            <div class="exp-period">08/2022 – 02/2023</div>
+          </div>
+          <div class="exp-role">Full Stack Developer</div>
+          <ul class="exp-list">
+            <li>Migrated legacy website from core PHP to the Laravel framework, improving code maintainability, security, and performance. Eliminated security threats such as DDoS Attacks, SQL Injections and Cross-site Scripting.</li>
+            <li>Developed a proof-of-concept (POC) application using Python and the Flask framework to integrate the company's Salesforce database with the website, enabling real-time inventory display.</li>
+            <li>Oversaw end-to-end website migration and ongoing administration, ensuring minimal downtime and seamless user experience.</li>
+            <li>Collaborated with KPMG to perform a comprehensive security risk assessment and implemented mitigation strategies to enhance application security and compliance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- E5 Infrastructure -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">E5 Infrastructure Pvt. Ltd. &nbsp;<span style="color:var(--text-muted);font-weight:400;font-size:0.85rem">· Gurgaon</span></div>
+            <div class="exp-period">09/2015 – 07/2022</div>
+          </div>
+          <div class="exp-role">Full Stack Web Developer | IT Advisor</div>
+          <ul class="exp-list">
+            <li>Developed an HR management application using the CodeIgniter framework to streamline employee attendance tracking and reporting.</li>
+            <li>Built a fuel management system in CodeIgniter to monitor and record vehicle fuel usage, enhancing operational efficiency and reducing wastage.</li>
+            <li>Designed, developed, and maintained multiple company websites using WordPress CMS, ensuring responsive design and SEO optimization.</li>
+            <li>Managed the end-to-end IT infrastructure for the company, including web and application architecture, development, deployment, and maintenance.</li>
+            <li>Served as a freelance IT consultant for five years, providing ongoing support and development expertise across web and application projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SysTools -->
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-company">SysTools Software Pvt. Ltd. &nbsp;<span style="color:var(--text-muted);font-weight:400;font-size:0.85rem">· Delhi</span></div>
+            <div class="exp-period">08/2013 – 08/2015</div>
+          </div>
+          <div class="exp-role">Web Developer</div>
+          <ul class="exp-list">
+            <li>Led website design and development initiatives, ensuring high-performance, responsive, and SEO-optimized web experiences. The managed website became the second-highest ranking site in organic traffic.</li>
+            <li>Managed all aspects of website content and technical implementation to improve Google SERP rankings.</li>
+            <li>Implemented on-page and off-page SEO strategies, including meta tagging, schema markup, backlinking, and site speed optimization.</li>
+            <li>Created and maintained content aligned with SEO best practices to drive organic traffic and improve user engagement.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="container">
+    <p class="section-label fade-in">// portfolio</p>
+    <h2 class="section-title fade-in">Personal Projects</h2>
+    <div class="section-line fade-in"></div>
+    <div class="projects-grid">
+
+      <div class="project-card fade-in">
+        <div class="project-icon">🧭</div>
+        <div class="project-title">Compass – AI Career Counselor</div>
+        <p class="project-desc">
+          An AI-powered career guidance app built with Python, LangChain, StreamLit, and Google Gemini.
+          Assists students in making informed career decisions based on personal goals and socioeconomic background.
+        </p>
+        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-icon">🔗</div>
+        <div class="project-title">LaGoSt App</div>
+        <p class="project-desc">
+          Demo application integrating LangChain with Google Gemini APIs using Python and StreamLit.
+          Showcases the potential of combining LLM orchestration tools with interactive frontend frameworks to build Generative AI apps.
+        </p>
+        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-icon">📝</div>
+        <div class="project-title">Web App Speed Optimization Blog</div>
+        <p class="project-desc">
+          Technical blog sharing practical tips and techniques to improve web application performance,
+          focusing on front-end optimization, caching, and load time reduction using WordPress.
+        </p>
+        <a href="#" class="project-link">Read Blog <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-icon">💬</div>
+        <div class="project-title">Stack Overflow Contributor</div>
+        <p class="project-desc">
+          Actively contributes by answering technical questions and helping peers resolve programming
+          challenges across web development, backend APIs, and cloud tooling.
+        </p>
+        <a href="#" class="project-link">View Profile <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-icon">🏋️</div>
+        <div class="project-title">Exercism.org Mentor</div>
+        <p class="project-desc">
+          Reviews code submissions and provides mentorship to learners, focusing on clean code practices,
+          debugging techniques, and improving algorithmic thinking.
+        </p>
+        <a href="#" class="project-link">View Profile <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-icon">⭐</div>
+        <div class="project-title">Fiverr – 350+ Five-Star Reviews</div>
+        <p class="project-desc">
+          Over 350 five-star reviews from clients worldwide on Fiverr for delivering exceptional backend
+          support, web development, and AI integration services.
+        </p>
+        <a href="#" class="project-link">View Profile <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+  <div class="container">
+    <p class="section-label fade-in">// credentials</p>
+    <h2 class="section-title fade-in">Certifications</h2>
+    <div class="section-line fade-in"></div>
+    <div class="cert-grid">
+
+      <div class="cert-card fade-in">
+        <div class="cert-issuer">Google</div>
+        <div class="cert-name"><a href="#">Introduction to Generative AI</a></div>
+        <div class="cert-desc">Gained foundational knowledge of Generative AI concepts and tools for app development.</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-issuer">Google Cloud</div>
+        <div class="cert-name"><a href="#">Vertex AI Studio</a></div>
+        <div class="cert-desc">Hands-on training in building and testing GenAI models using Vertex AI Studio on GCP.</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-issuer">Databricks</div>
+        <div class="cert-name"><a href="#">Generative AI Fundamentals</a></div>
+        <div class="cert-desc">Covered core principles of training and deploying Generative AI systems.</div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-issuer">KIIT University</div>
+        <div class="cert-name"><a href="#">Odia Gen AI & KIIT University Certificate</a></div>
+        <div class="cert-desc">Understood LLM training workflows; won 1st prize for a chatbot assisting students in career guidance.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="container">
+    <p class="section-label fade-in">// background</p>
+    <h2 class="section-title fade-in">Education</h2>
+    <div class="section-line fade-in"></div>
+    <div class="edu-grid">
+
+      <div class="edu-card fade-in">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div>
+          <div class="edu-degree">B.Tech (Information Technology)</div>
+          <div class="edu-school">Echelon Institute Of Technology, Faridabad</div>
+          <div class="edu-year">2013</div>
+        </div>
+      </div>
+
+      <div class="edu-card fade-in">
+        <div class="edu-icon"><i class="fas fa-school"></i></div>
+        <div>
+          <div class="edu-degree">12th Standard</div>
+          <div class="edu-school">St. Crispin's Senior Secondary School</div>
+          <div class="edu-year">2009</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-name">James Mascarenhas</div>
+  <div class="footer-tagline">Generative AI Developer · Full Stack Engineer · Gurgaon, India</div>
+  <div class="footer-links">
+    <a href="mailto:Hello@James.AL" class="footer-link"><i class="fas fa-envelope"></i> Hello@James.AL</a>
+    <a href="https://www.james.al" target="_blank" class="footer-link"><i class="fas fa-globe"></i> james.al</a>
+    <a href="tel:+919643179910" class="footer-link"><i class="fas fa-phone"></i> +91-9643179910</a>
+  </div>
+  <div class="footer-copy">© 2025 James Mascarenhas. Built with ♥ and pure HTML/CSS.</div>
+</footer>
+
+<!-- Scroll-to-Top -->
+<button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+  // ── Hamburger ──
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Close menu on link click
+  document.querySelectorAll('.nav-links a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'))
+  );
+
+  // ── Scroll-to-top button ──
+  const scrollBtn = document.getElementById('scrollTop');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('show', window.scrollY > 400);
+  });
+
+  // ── Intersection Observer for fade-in ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ── Active nav link on scroll ──
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.style.color = a.getAttribute('href') === `#${cur}` ? 'var(--accent)' : '';
+    });
+  });
+</script>
+</body>
+</html>
