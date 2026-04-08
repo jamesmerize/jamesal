@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directorate of Food Processing, Punjab - Official Website. Promoting food processing industry in Punjab for economic growth and farmer welfare.">
+    <meta name="keywords" content="Food Processing, Punjab, Directorate, Agriculture, Schemes, Grants, PMFME, PLI">
+    <meta name="author" content="Directorate of Food Processing, Punjab">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Directorate of Food Processing, Punjab | Government of Punjab</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+Gurmukhi:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ================================================
+           ROOT & RESET
+        ================================================ */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        :root {
+            --navy:       #003366;
+            --navy-dark:  #001f42;
+            --orange:     #FF6600;
+            --saffron:    #FF9933;
+            --green-in:   #138808;
+            --white:      #FFFFFF;
+            --light-bg:   #F4F6F9;
+            --mid-bg:     #EEF2F7;
+            --text-dark:  #1A1A2E;
+            --text-mid:   #444444;
+            --text-light: #666666;
+            --border:     #CCDDEE;
+            --shadow:     0 2px 14px rgba(0,51,102,.10);
+            --shadow-h:   0 6px 28px rgba(0,51,102,.18);
+            --radius:     6px;
+            --tr:         .25s ease;
+        }
+
+        html { scroll-behavior:smooth; font-size:15px; }
+
+        body {
+            font-family:'Noto Sans', Arial, sans-serif;
+            color:var(--text-dark);
+            background:var(--white);
+            line-height:1.7;
+        }
+
+        a { color:var(--navy); text-decoration:none; transition:color var(--tr); }
+        a:hover { color:var(--orange); }
+        a:focus { outline:2px solid var(--orange); outline-offset:2px; }
+        ul { list-style:none; }
+        img { max-width:100%; height:auto; display:block; }
+        button { font-family:inherit; }
+
+        .container { width:100%; max-width:1200px; margin:0 auto; padding:0 16px; }
+        .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+
+        /* ================================================
+           SKIP NAV
+        ================================================ */
+        .skip-nav {
+            position:absolute; top:-100px; left:0;
+            background:var(--navy); color:#fff;
+            padding:10px 20px; z-index:9999;
+            font-weight:600; border-radius:0 0 6px 0;
+            transition:top .3s;
+        }
+        .skip-nav:focus { top:0; }
+
+        /* ================================================
+           TOP BAR
+        ================================================ */
+        .top-bar {
+            background:var(--navy);
+            color:#cce0ff;
+            font-size:12.5px;
+            padding:5px 0;
+            border-bottom:2px solid var(--orange);
+        }
+        .top-bar .container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; }
+        .top-bar-left { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+        .top-bar-left span { display:flex; align-items:center; gap:6px; }
+        .top-bar-left i { color:var(--saffron); font-size:11px; }
+        .top-bar-right { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+
+        .access-controls { display:flex; align-items:center; gap:5px; }
+        .access-controls button {
+            background:transparent; border:1px solid #5588bb;
+            color:#cce0ff; padding:2px 8px; border-radius:3px;
+            cursor:pointer; font-size:12px; transition:background var(--tr);
+        }
+        .access-controls button:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+
+        .lang-switch a {
+            color:#cce0ff; font-size:12px; border:1px solid #5588bb;
+            padding:2px 10px; border-radius:3px; transition:background var(--tr);
+        }
+        .lang-switch a:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+
+        .social-top { display:flex; gap:7px; }
+        .social-top a {
+            color:#cce0ff; font-size:12px; width:24px; height:24px;
+            display:flex; align-items:center; justify-content:center;
+            border-radius:50%; border:1px solid #5588bb; transition:background var(--tr);
+        }
+        .social-top a:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+
+        /* ================================================
+           HEADER
+        ================================================ */
+        .site-header {
+            background:#fff;
+            border-bottom:3px solid var(--navy);
+            padding:10px 0;
+            position:sticky; top:0; z-index:1000;
+            box-shadow:0 2px 10px rgba(0,51,102,.12);
+        }
+        .header-inner { display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+
+        .header-logo { display:flex; align-items:center; gap:14px; }
+        .logo-emblem { width:72px; height:72px; flex-shrink:0; }
+
+        .logo-text .punjabi {
+            font-family:'Noto Sans Gurmukhi', sans-serif;
+            font-size:13.5px; color:var(--navy); font-weight:600;
+        }
+        .logo-text h1 { font-size:18px; font-weight:700; color:var(--navy); line-height:1.3; }
+        .logo-text h2 { font-size:13px; font-weight:500; color:var(--orange); margin-top:2px; }
+        .logo-text p  { font-size:11.5px; color:var(--text-light); }
+
+        .search-form {
+            display:flex; border:2px solid var(--navy);
+            border-radius:4px; overflow:hidden;
+        }
+        .search-form input {
+            padding:7px 14px; font-size:13px; border:none;
+            outline:none; width:220px; font-family:inherit;
+        }
+        .search-form button {
+            background:var(--navy); color:#fff; border:none;
+            padding:7px 14px; cursor:pointer; transition:background var(--tr);
+        }
+        .search-form button:hover { background:var(--orange); }
+
+        /* Hamburger */
+        .nav-toggle {
+            display:none; flex-direction:column; gap:5px;
+            background:none; border:none; cursor:pointer; padding:6px;
+        }
+        .nav-toggle span { display:block; width:28px; height:3px; background:var(--navy); border-radius:2px; transition:all .3s; }
+        .nav-toggle.open span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity:0; }
+        .nav-toggle.open span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+
+        /* ================================================
+           NAVIGATION
+        ================================================ */
+        .main-nav { background:var(--navy); position:relative; z-index:999; }
+        .nav-list { display:flex; align-items:stretch; }
+        .nav-list > li { position:relative; }
+        .nav-list > li > a {
+            display:flex; align-items:center; gap:5px;
+            color:#fff; padding:13px 16px;
+            font-size:13px; font-weight:500; letter-spacing:.3px;
+            border-right:1px solid rgba(255,255,255,.1);
+            transition:background var(--tr); white-space:nowrap;
+        }
+        .nav-list > li > a i.fa-chevron-down { font-size:10px; }
+        .nav-list > li > a:hover,
+        .nav-list > li > a.active { background:var(--orange); color:#fff; }
+
+        .dropdown {
+            display:none; position:absolute; top:100%; left:0;
+            background:#fff; min-width:230px;
+            border:1px solid var(--border); border-top:3px solid var(--orange);
+            box-shadow:var(--shadow-h); z-index:1001;
+        }
+        .dropdown li a {
+            display:flex; align-items:center; gap:8px;
+            padding:10px 18px; color:var(--text-dark);
+            font-size:13px; border-bottom:1px solid #eee; transition:background var(--tr);
+        }
+        .dropdown li a:hover { background:var(--light-bg); color:var(--navy); padding-left:24px; }
+        .dropdown li:last-child a { border-bottom:none; }
+        .nav-list > li:hover .dropdown { display:block; }
+
+        /* ================================================
+           TICKER
+        ================================================ */
+        .ticker-bar {
+            background:#FFF8E7; border-bottom:1px solid #FFD580;
+            padding:7px 0; display:flex; align-items:center;
+        }
+        .ticker-label {
+            background:var(--orange); color:#fff; font-size:11.5px;
+            font-weight:700; padding:5px 14px; white-space:nowrap;
+            letter-spacing:1px; border-radius:0 3px 3px 0;
+            margin-right:14px; flex-shrink:0;
+        }
+        .ticker-content { overflow:hidden; flex:1; }
+        .ticker-content marquee { font-size:13px; color:var(--text-dark); }
+        .ticker-content marquee a { color:var(--navy); font-weight:600; }
+        .ticker-content marquee a:hover { color:var(--orange); }
+
+        /* ================================================
+           HERO SLIDER
+        ================================================ */
+        .hero-section { position:relative; overflow:hidden; background:var(--navy); height:480px; }
+
+        .slide { display:none; position:absolute; width:100%; height:100%; top:0; left:0; }
+        .slide.active { display:flex; align-items:center; }
+
+        .slide-bg {
+            position:absolute; inset:0; background-size:cover;
+            background-position:center; filter:brightness(.42);
+            transition:transform 7s ease;
+        }
+        .slide.active .slide-bg { transform:scale(1.05); }
+
+        .slide-content {
+            position:relative; z-index:2; padding:40px 52px;
+            max-width:700px; animation:slideIn .8s ease;
+        }
+        @keyframes slideIn { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
+
+        .slide-tag {
+            background:var(--orange); color:#fff; font-size:11px;
+            font-weight:700; letter-spacing:2px; padding:4px 14px;
+            border-radius:2px; display:inline-block; margin-bottom:14px; text-transform:uppercase;
+        }
+        .slide-content h2 {
+            font-size:34px; color:#fff; font-weight:700;
+            line-height:1.3; margin-bottom:14px; text-shadow:0 2px 10px rgba(0,0,0,.4);
+        }
+        .slide-content p { font-size:15px; color:rgba(255,255,255,.86); margin-bottom:26px; line-height:1.75; }
+
+        .btn-primary {
+            background:var(--orange); color:#fff; padding:11px 28px;
+            border-radius:var(--radius); font-weight:600; font-size:14px;
+            display:inline-flex; align-items:center; gap:8px;
+            border:2px solid var(--orange); cursor:pointer; transition:all var(--tr);
+        }
+        .btn-primary:hover { background:transparent; color:#fff; }
+
+        .btn-secondary {
+            background:transparent; color:#fff; padding:11px 28px;
+            border-radius:var(--radius); font-weight:600; font-size:14px;
+            display:inline-flex; align-items:center; gap:8px;
+            border:2px solid rgba(255,255,255,.65); cursor:pointer;
+            transition:all var(--tr); margin-left:12px;
+        }
+        .btn-secondary:hover { background:rgba(255,255,255,.12); }
+
+        .slider-controls { position:absolute; bottom:22px; left:50%; transform:translateX(-50%); display:flex; gap:10px; z-index:10; }
+        .dot { width:12px; height:12px; border-radius:50%; background:rgba(255,255,255,.4); cursor:pointer; border:2px solid rgba(255,255,255,.65); transition:background var(--tr); }
+        .dot.active { background:var(--orange); border-color:var(--orange); }
+
+        .slider-arrow {
+            position:absolute; top:50%; transform:translateY(-50%);
+            background:rgba(0,0,0,.28); color:#fff; border:none;
+            width:44px; height:44px; border-radius:50%; font-size:18px;
+            cursor:pointer; z-index:10; transition:background var(--tr);
+            display:flex; align-items:center; justify-content:center;
+        }
+        .slider-arrow:hover { background:var(--orange); }
+        .slider-prev { left:18px; }
+        .slider-next { right:18px; }
+
+        /* ================================================
+           STATS BAR
+        ================================================ */
+        .stats-bar { background:var(--navy); padding:22px 0; }
+        .stats-grid { display:grid; grid-template-columns:repeat(5,1fr); }
+        .stat-item { text-align:center; padding:14px 10px; border-right:1px solid rgba(255,255,255,.14); }
+        .stat-item:last-child { border-right:none; }
+        .stat-icon { font-size:20px; color:rgba(255,255,255,.28); margin-bottom:5px; }
+        .stat-number { font-size:30px; font-weight:700; color:var(--saffron); line-height:1.1; }
+        .stat-number sup { font-size:16px; }
+        .stat-label { font-size:12px; color:rgba(255,255,255,.72); margin-top:4px; }
+
+        /* ================================================
+           SECTION COMMON
+        ================================================ */
+        .section-tag { font-size:11.5px; font-weight:700; letter-spacing:2px; color:var(--orange); text-transform:uppercase; margin-bottom:5px; }
+        .section-title { font-size:26px; font-weight:700; color:var(--navy); display:inline-block; }
+        .section-title::after {
+            content:''; display:block; width:55px; height:3px;
+            background:linear-gradient(90deg,var(--navy),var(--orange));
+            margin:9px 0 0; border-radius:2px;
+        }
+        .section-title-center::after { margin:9px auto 0; }
+        .section-subtitle { font-size:13.5px; color:var(--text-light); margin-top:8px; }
+        .section-header-center { text-align:center; margin-bottom:34px; }
+        .section-header-left { margin-bottom:28px; }
+
+        /* ================================================
+           QUICK SERVICES
+        ================================================ */
+        .quick-services { background:#fff; padding:44px 0; border-bottom:1px solid var(--border); }
+        .services-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+
+        .service-card {
+            background:#fff; border:1px solid var(--border);
+            border-radius:var(--radius); padding:22px 12px;
+            text-align:center; cursor:pointer;
+            transition:all var(--tr); position:relative; overflow:hidden;
+        }
+        .service-card::before {
+            content:''; position:absolute; bottom:0; left:0; right:0;
+            height:3px; background:var(--orange); transform:scaleX(0);
+            transition:transform var(--tr);
+        }
+        .service-card:hover { border-color:var(--navy); box-shadow:var(--shadow-h); transform:translateY(-4px); }
+        .service-card:hover::before { transform:scaleX(1); }
+        .service-icon {
+            width:58px; height:58px; border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            margin:0 auto 13px; font-size:22px;
+            transition:all var(--tr);
+        }
+        .service-card:hover .service-icon { background:var(--navy) !important; color:#fff !important; }
+        .service-card h4 { font-size:12.5px; font-weight:600; color:var(--navy); line-height:1.4; }
+
+        /* ================================================
+           MAIN 2-COL CONTENT
+        ================================================ */
+        .main-content { background:var(--light-bg); padding:46px 0; }
+        .content-grid { display:grid; grid-template-columns:2fr 1fr; gap:24px; }
+
+        /* Card */
+        .card { background:#fff; border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; margin-bottom:22px; }
+        .card:last-child { margin-bottom:0; }
+        .card-header {
+            background:var(--navy); color:#fff; padding:13px 18px;
+            display:flex; align-items:center; justify-content:space-between;
+        }
+        .card-header h3 { font-size:15px; font-weight:600; display:flex; align-items:center; gap:8px; }
+        .card-header h3 i { color:var(--saffron); }
+        .card-header a { color:var(--saffron); font-size:12px; font-weight:500; }
+        .card-header a:hover { color:#fff; }
+        .card-body { padding:18px; }
+
+        /* News */
+        .news-list li { padding:11px 0; border-bottom:1px dashed var(--border); display:flex; gap:12px; align-items:flex-start; }
+        .news-list li:last-child { border-bottom:none; padding-bottom:0; }
+        .news-date { background:var(--navy); color:#fff; font-size:10.5px; font-weight:700; padding:4px 8px; border-radius:3px; text-align:center; min-width:44px; flex-shrink:0; }
+        .news-date span { display:block; font-size:17px; font-weight:700; color:var(--saffron); line-height:1.1; }
+        .news-text a { font-size:13.5px; color:var(--text-dark); font-weight:500; display:block; line-height:1.5; }
+        .news-text a:hover { color:var(--navy); }
+        .news-text small { color:var(--text-light); font-size:11.5px; display:flex; align-items:center; gap:4px; margin-top:3px; }
+        .badge-new { background:var(--green-in); color:#fff; font-size:9.5px; font-weight:700; padding:1px 6px; border-radius:2px; margin-left:5px; vertical-align:middle; animation:blink 1.5s step-end infinite; }
+        @keyframes blink { 50%{opacity:0} }
+
+        /* Tenders */
+        .tender-list li { padding:10px 0; border-bottom:1px dashed var(--border); font-size:13px; }
+        .tender-list li:last-child { border-bottom:none; }
+        .tender-list li a { display:flex; align-items:flex-start; gap:8px; color:var(--text-dark); }
+        .tender-list li a i { color:var(--orange); font-size:12px; margin-top:3px; flex-shrink:0; }
+        .tender-list li a:hover { color:var(--navy); }
+        .tender-meta { display:flex; gap:10px; margin-top:4px; font-size:11.5px; color:var(--text-light); }
+        .tender-meta span { display:flex; align-items:center; gap:3px; }
+
+        /* Sidebar */
+        .sidebar { display:flex; flex-direction:column; gap:22px; }
+
+        /* Events */
+        .event-item { display:flex; gap:12px; padding:11px 0; border-bottom:1px dashed var(--border); }
+        .event-item:last-child { border-bottom:none; }
+        .event-date-box { background:var(--navy); color:#fff; text-align:center; padding:7px 10px; border-radius:4px; min-width:50px; flex-shrink:0; }
+        .event-date-box .day { font-size:22px; font-weight:700; color:var(--saffron); line-height:1; }
+        .event-date-box .mon { font-size:11px; text-transform:uppercase; }
+        .event-info h5 { font-size:13px; font-weight:600; color:var(--text-dark); line-height:1.4; }
+        .event-info small { font-size:11.5px; color:var(--text-light); display:flex; align-items:center; gap:4px; margin-top:3px; }
+        .event-tag { background:var(--light-bg); color:var(--navy); font-size:10.5px; font-weight:600; padding:2px 7px; border-radius:2px; border:1px solid var(--border); display:inline-block; margin-top:4px; }
+
+        /* Gallery */
+        .gallery-preview { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+        .gallery-thumb { aspect-ratio:1; background:var(--mid-bg); border-radius:3px; overflow:hidden; cursor:pointer; position:relative; }
+        .gallery-thumb img { width:100%; height:100%; object-fit:cover; transition:transform .35s; }
+        .gallery-thumb:hover img { transform:scale(1.1); }
+        .gallery-overlay { position:absolute; inset:0; background:rgba(0,51,102,.55); display:flex; align-items:center; justify-content:center; color:#fff; font-size:20px; opacity:0; transition:opacity .3s; }
+        .gallery-thumb:hover .gallery-overlay { opacity:1; }
+
+        /* Quick Links Sidebar */
+        .quick-link-list li { border-bottom:1px dashed var(--border); }
+        .quick-link-list li:last-child { border-bottom:none; }
+        .quick-link-list li a { display:flex; align-items:center; gap:8px; padding:9px 2px; font-size:13px; color:var(--text-dark); transition:all var(--tr); }
+        .quick-link-list li a i { color:var(--orange); width:16px; flex-shrink:0; }
+        .quick-link-list li a:hover { color:var(--navy); padding-left:8px; }
+
+        /* ================================================
+           SCHEMES SECTION
+        ================================================ */
+        .schemes-section { background:#fff; padding:52px 0; }
+        .schemes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:8px; }
+        .scheme-card {
+            background:#fff; border:1px solid var(--border);
+            border-radius:var(--radius); padding:22px 20px;
+            border-top:4px solid var(--navy); transition:all var(--tr); position:relative;
+        }
+        .scheme-card:hover { box-shadow:var(--shadow-h); border-top-color:var(--orange); transform:translateY(-3px); }
+        .scheme-badge {
+            position:absolute; top:16px; right:16px;
+            font-size:10px; font-weight:700; padding:2px 8px;
+            border-radius:20px; letter-spacing:.5px;
+        }
+        .badge-central { background:#EEF6FF; color:#003399; border:1px solid #b3d4ff; }
+        .badge-state   { background:#FFF0E5; color:var(--orange); border:1px solid #ffcba4; }
+        .badge-new-s   { background:#E5F9ED; color:var(--green-in); border:1px solid #a4e5bd; }
+
+        .scheme-icon-wrap {
+            width:52px; height:52px; border-radius:10px;
+            display:flex; align-items:center; justify-content:center;
+            font-size:22px; margin-bottom:14px;
+        }
+        .scheme-card h4 { font-size:14.5px; font-weight:700; color:var(--navy); margin-bottom:8px; line-height:1.4; }
+        .scheme-card p  { font-size:12.5px; color:var(--text-light); line-height:1.65; margin-bottom:14px; }
+        .scheme-highlights { display:flex; flex-direction:column; gap:5px; margin-bottom:14px; }
+        .scheme-highlights span { font-size:12px; color:var(--text-mid); display:flex; align-items:center; gap:6px; }
+        .scheme-highlights span i { color:var(--green-in); font-size:11px; }
+        .scheme-link { font-size:13px; color:var(--navy); font-weight:600; display:inline-flex; align-items:center; gap:5px; }
+        .scheme-link:hover { color:var(--orange); }
+
+        /* ================================================
+           ABOUT SECTION
+        ================================================ */
+        .about-section { background:linear-gradient(135deg,#003366 0%,#005099 100%); padding:60px 0; }
+        .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center; }
+        .about-text h2 { font-size:30px; font-weight:700; color:#fff; margin-bottom:4px; }
+        .about-sub { color:var(--saffron); font-size:13.5px; margin-bottom:18px; }
+        .about-text p { font-size:14px; color:rgba(255,255,255,.85); line-height:1.82; margin-bottom:14px; }
+        .about-features { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px; }
+        .about-feature { display:flex; align-items:flex-start; gap:10px; font-size:13px; color:rgba(255,255,255,.84); }
+        .about-feature i { color:var(--saffron); font-size:15px; margin-top:2px; flex-shrink:0; }
+
+        .vm-cards { display:flex; flex-direction:column; gap:18px; }
+        .vm-card { background:rgba(255,255,255,.09); border:1px solid rgba(255,255,255,.2); border-radius:var(--radius); padding:22px; backdrop-filter:blur(6px); }
+        .vm-card h4 { font-size:16px; color:var(--saffron); margin-bottom:10px; display:flex; align-items:center; gap:8px; }
+        .vm-card p { font-size:13.5px; color:rgba(255,255,255,.82); line-height:1.72; }
+        .vm-list { margin-top:10px; display:flex; flex-direction:column; gap:6px; }
+        .vm-list li { font-size:13px; color:rgba(255,255,255,.75); display:flex; align-items:flex-start; gap:8px; }
+        .vm-list li::before { content:'✓'; color:var(--saffron); flex-shrink:0; font-weight:700; }
+
+        /* ================================================
+           IMPORTANT LINKS
+        ================================================ */
+        .imp-links { background:var(--light-bg); padding:50px 0; }
+        .links-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+        .link-col h4 { font-size:14px; font-weight:700; color:var(--navy); border-bottom:2px solid var(--orange); padding-bottom:8px; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+        .link-col ul li { padding:5px 0; border-bottom:1px dotted var(--border); font-size:13px; }
+        .link-col ul li:last-child { border-bottom:none; }
+        .link-col ul li a { color:var(--text-mid); display:flex; align-items:center; gap:6px; transition:all var(--tr); }
+        .link-col ul li a::before { content:'›'; color:var(--orange); font-weight:700; font-size:16px; }
+        .link-col ul li a:hover { color:var(--navy); padding-left:4px; }
+
+        /* ================================================
+           MEDIA / GALLERY
+        ================================================ */
+        .media-section { background:var(--mid-bg); padding:50px 0; }
+        .media-tabs { display:flex; gap:0; border-bottom:2px solid var(--border); margin-bottom:26px; }
+        .tab-btn { background:none; border:none; padding:10px 24px; font-size:14px; font-weight:600; color:var(--text-mid); cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px; transition:all var(--tr); font-family:inherit; }
+        .tab-btn.active { color:var(--navy); border-bottom-color:var(--orange); }
+        .tab-btn:hover { color:var(--navy); }
+        .tab-pane { display:none; }
+        .tab-pane.active { display:block; }
+
+        .photo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+        .photo-item { border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; background:var(--border); cursor:pointer; position:relative; }
+        .photo-item img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+        .photo-item:hover img { transform:scale(1.09); }
+        .photo-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,.72)); color:#fff; padding:12px 10px 8px; font-size:11.5px; transform:translateY(100%); transition:transform .3s; }
+        .photo-item:hover .photo-caption { transform:translateY(0); }
+
+        .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+        .video-item { border-radius:var(--radius); overflow:hidden; aspect-ratio:16/9; background:#000; cursor:pointer; position:relative; }
+        .video-item img { width:100%; height:100%; object-fit:cover; opacity:.8; }
+        .play-btn { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+        .play-btn i { font-size:44px; color:rgba(255,255,255,.85); filter:drop-shadow(0 2px 6px rgba(0,0,0,.5)); transition:all var(--tr); }
+        .video-item:hover .play-btn i { color:#fff; transform:scale(1.1); }
+        .video-title { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(0,0,0,.75)); color:#fff; padding:14px 10px 8px; font-size:12px; font-weight:500; }
+
+        /* ================================================
+           GRIEVANCE BANNER
+        ================================================ */
+        .grievance-banner { background:linear-gradient(90deg,var(--orange) 0%,#d94f00 100%); padding:30px 0; }
+        .grievance-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+        .grievance-text h3 { font-size:22px; color:#fff; font-weight:700; }
+        .grievance-text p { font-size:13.5px; color:rgba(255,255,255,.88); }
+        .btn-white { background:#fff; color:var(--orange); padding:10px 24px; border-radius:var(--radius); font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:8px; border:2px solid #fff; cursor:pointer; transition:all var(--tr); }
+        .btn-white:hover { background:transparent; color:#fff; }
+        .btn-outline-w { background:transparent; color:#fff; padding:10px 24px; border-radius:var(--radius); font-weight:700; font-size:13.5px; display:inline-flex; align-items:center; gap:8px; border:2px solid #fff; cursor:pointer; transition:all var(--tr); }
+        .btn-outline-w:hover { background:rgba(255,255,255,.15); }
+
+        /* ================================================
+           CONTACT
+        ================================================ */
+        .contact-section { background:#fff; padding:52px 0; }
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+        .contact-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px; }
+        .contact-info-card { background:var(--light-bg); border:1px solid var(--border); border-radius:var(--radius); padding:20px 18px; text-align:center; transition:all var(--tr); }
+        .contact-info-card:hover { box-shadow:var(--shadow-h); border-color:var(--navy); }
+        .ci-icon { width:52px; height:52px; background:var(--navy); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:20px; color:var(--saffron); }
+        .contact-info-card h4 { font-size:14px; color:var(--navy); font-weight:700; margin-bottom:6px; }
+        .contact-info-card p  { font-size:13px; color:var(--text-mid); line-height:1.7; }
+        .contact-info-card a  { color:var(--navy); font-weight:500; }
+        .contact-info-card a:hover { color:var(--orange); }
+
+        /* Map embed placeholder */
+        .map-placeholder { background:var(--mid-bg); border:1px solid var(--border); border-radius:var(--radius); height:160px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--text-light); font-size:13.5px; margin-top:0; }
+        .map-placeholder i { font-size:28px; color:var(--navy); }
+
+        /* Contact Form */
+        .contact-form-wrap { background:var(--light-bg); border:1px solid var(--border); border-radius:var(--radius); padding:26px; }
+        .contact-form-wrap h3 { font-size:18px; color:var(--navy); font-weight:700; margin-bottom:20px; display:flex; align-items:center; gap:8px; }
+        .form-group { margin-bottom:14px; }
+        .form-group label { display:block; font-size:13px; font-weight:600; color:var(--text-dark); margin-bottom:5px; }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width:100%; padding:9px 12px; border:1px solid var(--border);
+            border-radius:4px; font-size:13.5px; font-family:inherit;
+            color:var(--text-dark); background:#fff; transition:border-color var(--tr);
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus { outline:none; border-color:var(--navy); box-shadow:0 0 0 3px rgba(0,51,102,.09); }
+        .form-group textarea { resize:vertical; min-height:90px; }
+        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+        .captcha-row { display:flex; gap:10px; align-items:center; }
+        .captcha-code { font-family:monospace; font-size:20px; font-weight:700; color:var(--navy); letter-spacing:5px; background:repeating-linear-gradient(45deg,#ddd 0,#ddd 1px,#eee 0,#eee 50%); background-size:4px 4px; padding:5px 14px; border-radius:3px; user-select:none; }
+        .captcha-refresh { background:none; border:none; color:var(--navy); cursor:pointer; font-size:16px; padding:4px; }
+        .form-submit { background:var(--navy); color:#fff; border:none; padding:11px 32px; border-radius:var(--radius); font-size:14px; font-weight:600; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:background var(--tr); }
+        .form-submit:hover { background:var(--orange); }
+
+        /* ================================================
+           FOOTER
+        ================================================ */
+        .site-footer { background:#0a1929; color:rgba(255,255,255,.72); padding:50px 0 0; }
+        .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1fr; gap:34px; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.1); }
+
+        .footer-brand-logo { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+        .footer-brand-logo h3 { font-size:16px; color:#fff; font-weight:700; line-height:1.3; }
+        .footer-brand p { font-size:13px; line-height:1.75; margin-bottom:14px; }
+        .footer-brand .contact-strip { display:flex; flex-direction:column; gap:7px; font-size:13px; }
+        .footer-brand .contact-strip span { display:flex; align-items:center; gap:8px; }
+        .footer-brand .contact-strip i { color:var(--saffron); width:16px; }
+        .footer-social { display:flex; gap:9px; margin-top:16px; }
+        .footer-social a { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.68); font-size:14px; transition:all var(--tr); }
+        .footer-social a:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+
+        .footer-col h4 { font-size:14px; font-weight:700; color:#fff; margin-bottom:16px; padding-bottom:8px; border-bottom:2px solid var(--orange); }
+        .footer-col ul li { padding:5px 0; border-bottom:1px dotted rgba(255,255,255,.07); }
+        .footer-col ul li:last-child { border-bottom:none; }
+        .footer-col ul li a { color:rgba(255,255,255,.62); font-size:13px; display:flex; align-items:center; gap:6px; transition:all var(--tr); }
+        .footer-col ul li a::before { content:'›'; color:var(--orange); font-size:15px; }
+        .footer-col ul li a:hover { color:#fff; padding-left:4px; }
+
+        .footer-bottom { background:#060e1a; padding:14px 0; }
+        .footer-bottom-inner { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12px; }
+        .footer-bottom-inner p { color:rgba(255,255,255,.50); }
+        .footer-links-bottom { display:flex; gap:16px; flex-wrap:wrap; }
+        .footer-links-bottom a { color:rgba(255,255,255,.50); font-size:12px; }
+        .footer-links-bottom a:hover { color:var(--orange); }
+        .visitor-count { display:flex; align-items:center; gap:7px; font-size:12px; color:rgba(255,255,255,.50); }
+        .visitor-count i { color:var(--orange); }
+
+        /* ================================================
+           BACK TO TOP & CHATBOT
+        ================================================ */
+        .back-to-top { position:fixed; bottom:28px; right:24px; width:44px; height:44px; background:var(--navy); color:#fff; border-radius:50%; display:none; align-items:center; justify-content:center; font-size:18px; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,.28); z-index:999; border:none; transition:background var(--tr); }
+        .back-to-top.visible { display:flex; }
+        .back-to-top:hover { background:var(--orange); }
+
+        .chatbot-fab { position:fixed; bottom:84px; right:24px; background:var(--green-in); color:#fff; border:none; border-radius:50px; padding:11px 18px; font-size:13px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px; box-shadow:0 4px 18px rgba(0,0,0,.22); z-index:998; transition:all var(--tr); }
+        .chatbot-fab:hover { transform:scale(1.05); }
+
+        /* ================================================
+           HIGH CONTRAST
+        ================================================ */
+        body.hc { background:#000 !important; color:#fff !important; }
+        body.hc a { color:#ff0 !important; }
+        body.hc .site-header,body.hc .card,body.hc .scheme-card { background:#000 !important; border-color:#fff !important; }
+        body.hc .main-nav { background:#111 !important; }
+
+        /* ================================================
+           RESPONSIVE
+        ================================================ */
+        @media(max-width:1100px){
+            .services-grid { grid-template-columns:repeat(3,1fr); }
+            .schemes-grid  { grid-template-columns:repeat(2,1fr); }
+            .stats-grid    { grid-template-columns:repeat(3,1fr); }
+            .footer-grid   { grid-template-columns:1fr 1fr; }
+        }
+        @media(max-width:900px){
+            .content-grid  { grid-template-columns:1fr; }
+            .about-grid    { grid-template-columns:1fr; gap:30px; }
+            .contact-grid  { grid-template-columns:1fr; }
+            .links-grid    { grid-template-columns:1fr 1fr; }
+            .photo-grid    { grid-template-columns:repeat(2,1fr); }
+            .video-grid    { grid-template-columns:repeat(2,1fr); }
+        }
+        @media(max-width:768px){
+            .top-bar .container { flex-direction:column; align-items:flex-start; }
+            .top-bar-right { width:100%; justify-content:flex-start; }
+            .logo-text h1  { font-size:15px; }
+            .logo-emblem   { width:56px; height:56px; }
+            .nav-toggle    { display:flex; }
+            .nav-list      { display:none; flex-direction:column; }
+            .nav-list.open { display:flex; }
+            .nav-list>li>a { border-right:none; border-bottom:1px solid rgba(255,255,255,.1); }
+            .dropdown      { position:static; border-top:1px solid rgba(255,255,255,.1); display:none !important; }
+            .hero-section  { height:320px; }
+            .slide-content { padding:24px 20px; }
+            .slide-content h2 { font-size:22px; }
+            .btn-secondary { display:none; }
+            .stats-grid    { grid-template-columns:repeat(2,1fr); }
+            .services-grid { grid-template-columns:repeat(2,1fr); }
+            .schemes-grid  { grid-template-columns:1fr; }
+            .links-grid    { grid-template-columns:1fr; }
+            .contact-info-grid { grid-template-columns:1fr; }
+            .footer-grid   { grid-template-columns:1fr; }
+            .about-features { grid-template-columns:1fr; }
+            .form-row      { grid-template-columns:1fr; }
+            .photo-grid    { grid-template-columns:repeat(2,1fr); }
+            .video-grid    { grid-template-columns:1fr; }
+        }
+        @media(max-width:480px){
+            .slide-content h2 { font-size:18px; }
+            .section-title { font-size:21px; }
+            .stat-number { font-size:24px; }
+            .services-grid { grid-template-columns:repeat(2,1fr); }
+        }
+    </style>
+        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+        <df-messenger
+          location="us-central1"
+          project-id="striped-orbit-426202-i3"
+          agent-id="7e2f5a9c-aaba-476d-b923-a10583befbf8"
+          language-code="en"
+          max-query-length="-1">
+          <df-messenger-chat-bubble
+            chat-title="BibazBot">
+          </df-messenger-chat-bubble>
+        </df-messenger>
+        <style>
+          df-messenger {
+            z-index: 999;
+            position: fixed;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            bottom: 16px;
+            right: 16px;
+          }
+        </style>
+</head>
+<body>
+
+<!-- Skip Nav -->
+<a class="skip-nav" href="#main-content">Skip to Main Content</a>
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+<div class="top-bar" role="complementary" aria-label="Utility bar">
+    <div class="container">
+        <div class="top-bar-left">
+            <span><i class="fas fa-map-marker-alt"></i> Directorate of Food Processing, Punjab, Chandigarh – 160017</span>
+            <span><i class="fas fa-clock"></i> Mon–Fri: 9:00 AM – 5:00 PM</span>
+        </div>
+        <div class="top-bar-right">
+            <div class="access-controls" role="group" aria-label="Text size controls">
+                <button onclick="changeFontSize('increase')" title="Increase font size" aria-label="Increase font size">A+</button>
+                <button onclick="changeFontSize('default')"  title="Normal font size"   aria-label="Normal font size">A</button>
+                <button onclick="changeFontSize('decrease')" title="Decrease font size" aria-label="Decrease font size">A-</button>
+                <button onclick="toggleContrast()" title="High Contrast" aria-label="Toggle high contrast"><i class="fas fa-adjust"></i></button>
+            </div>
+            <div class="lang-switch">
+                <a href="#" hreflang="pa" aria-label="Switch to Punjabi language">ਪੰਜਾਬੀ</a>
+            </div>
+            <div class="social-top" aria-label="Social media links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Koo"><i class="fas fa-crow"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+<header class="site-header" role="banner" id="top">
+    <div class="container">
+        <div class="header-inner">
+            <!-- Logo -->
+            <div class="header-logo">
+                <!-- Ashoka Emblem SVG (simplified) -->
+                <svg class="logo-emblem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Emblem of India and Punjab Government">
+                    <circle cx="50" cy="50" r="48" fill="#003366" stroke="#FF9933" stroke-width="2.5"/>
+                    <circle cx="50" cy="50" r="38" fill="#003366" stroke="#FF9933" stroke-width="1.2"/>
+                    <text x="50" y="36" text-anchor="middle" font-size="20" fill="#FF9933">🦁</text>
+                    <circle cx="50" cy="60" r="11" fill="none" stroke="#FF9933" stroke-width="1.8"/>
+                    <line x1="50" y1="49" x2="50" y2="71" stroke="#FF9933" stroke-width=".9"/>
+                    <line x1="39" y1="55" x2="61" y2="65" stroke="#FF9933" stroke-width=".9"/>
+                    <line x1="61" y1="55" x2="39" y2="65" stroke="#FF9933" stroke-width=".9"/>
+                    <line x1="39" y1="60" x2="61" y2="60" stroke="#FF9933" stroke-width=".9"/>
+                    <line x1="42.5" y1="52.5" x2="57.5" y2="67.5" stroke="#FF9933" stroke-width=".9"/>
+                    <line x1="57.5" y1="52.5" x2="42.5" y2="67.5" stroke="#FF9933" stroke-width=".9"/>
+                    <text x="50" y="82" text-anchor="middle" font-size="5.5" fill="#FF9933" font-family="Arial">सत्यमेव जयते</text>
+                </svg>
+                <div class="logo-text">
+                    <p class="punjabi">ਭੋਜਨ ਪ੍ਰੋਸੈਸਿੰਗ ਡਾਇਰੈਕਟੋਰੇਟ, ਪੰਜਾਬ</p>
+                    <h1>Directorate of Food Processing, Punjab</h1>
+                    <h2>Government of Punjab &nbsp;|&nbsp; ਪੰਜਾਬ ਸਰਕਾਰ</h2>
+                    <p>Department of Agriculture &amp; Farmers' Welfare, Punjab</p>
+                </div>
+            </div>
+            <!-- Search -->
+            <form class="search-form" role="search" action="#" method="get">
+                <label for="site-search" class="sr-only">Search this website</label>
+                <input type="search" id="site-search" name="q" placeholder="Search…" aria-label="Search the website">
+                <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+            </form>
+            <!-- Hamburger -->
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation menu" aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- =====================================================
+     MAIN NAVIGATION
+===================================================== -->
+<nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="container">
+        <ul class="nav-list" id="mainNav" role="menubar">
+            <li role="none"><a href="#home" role="menuitem" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li role="none">
+                <a href="#about" role="menuitem">About Us <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" role="menu" aria-label="About Us submenu">
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Overview</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Vision &amp; Mission</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Organisational Structure</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Officers &amp; Staff</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Citizen Charter</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Annual Reports</a></li>
+                </ul>
+            </li>
+            <li role="none">
+                <a href="#schemes" role="menuitem">Schemes &amp; Subsidies <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" role="menu">
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> PMFME Scheme</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> PLI for Food Processing</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> MoFPI Central Schemes</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> State Subsidy Schemes</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Cold Chain Scheme</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Mega Food Park</a></li>
+                </ul>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem">Citizen Services <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" role="menu">
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Apply for Grant / Subsidy</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Track Application Status</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> FSSAI Registration</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Industry Registration</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Download Forms</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> e-Certificate Verification</a></li>
+                </ul>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem">Tenders <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" role="menu">
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Active Tenders</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Archived Tenders</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Corrigendum</a></li>
+                </ul>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem">RTI <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" role="menu">
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> File RTI Online</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> RTI Disclosure</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Public Information Officer</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> RTI Annual Reports</a></li>
+                </ul>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem">Media <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown" role="menu">
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Photo Gallery</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Video Gallery</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Press Releases</a></li>
+                    <li><a href="#" role="menuitem"><i class="fas fa-angle-right"></i> Publications</a></li>
+                </ul>
+            </li>
+            <li role="none"><a href="#contact" role="menuitem">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- =====================================================
+     TICKER
+===================================================== -->
+<div class="ticker-bar" role="region" aria-label="Latest Announcements" aria-live="polite">
+    <div class="container" style="display:flex;align-items:center;">
+        <span class="ticker-label">📢 LATEST</span>
+        <div class="ticker-content">
+            <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+                &nbsp;&nbsp;&nbsp;
+                <a href="#">Applications open for PMFME Scheme 2024-25 – Apply before 31 March 2025</a> &nbsp;|&nbsp;
+                <a href="#">PLI Scheme for Food Processing – New beneficiary list announced <span class="badge-new">NEW</span></a> &nbsp;|&nbsp;
+                <a href="#">State Food Processing Policy 2024 – Download the Notification</a> &nbsp;|&nbsp;
+                <a href="#">Mega Food Park, Phagwara – Allotment of plots open for applications</a> &nbsp;|&nbsp;
+                <a href="#">Training Programme on Food Safety &amp; Hygiene – 15 Feb 2025, Ludhiana</a> &nbsp;|&nbsp;
+                <a href="#">Cold Chain Subsidy Scheme – Last date extended to 28 Feb 2025 <span class="badge-new">NEW</span></a>
+            </marquee>
+        </div>
+    </div>
+</div>
+
+<!-- =====================================================
+     HERO SLIDER
+===================================================== -->
+<section class="hero-section" id="home" aria-label="Homepage Banner" role="region">
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide1">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1400&q=80');"></div>
+        <div class="slide-content">
+            <span class="slide-tag">🌾"Business Bibaz"- a Punjab government initiative</span>
+            <h2>Empowering Punjab's  rural women by training Food Process &amp; Entrepreneurship</h2>
+            <p>Transforming farm women into "shepreneurs" through hands-on training, focusing on dairy, bakery, and agricultural products</p>
+            <a href="#" class="btn-primary"><i class="fas fa-file-alt"></i> Apply Now</a>
+            <a href="#" class="btn-secondary"><i class="fas fa-info-circle"></i> Learn More</a>
+        </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=1400&q=80');">
+
+        </div></div></section>
+
+<!-- =====================================================
+     STATS BAR
+===================================================== -->
+<section class="stats-bar" aria-label="Key Statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-industry"></i></div>
+                <div class="stat-number"><span id="cnt1">100</span><sup>+</sup></div>
+                <div class="stat-label">Registered Food Units</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                <div class="stat-number">₹<span id="cnt2">100</span>Cr<sup>+</sup></div>
+                <div class="stat-label">Subsidies Disbursed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number"><span id="cnt3">550</span>K<sup>+</sup></div>
+                <div class="stat-label">Beneficiaries Supported</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="stat-number"><span id="cnt4">10</span></div>
+                <div class="stat-label">Districts Covered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                <div class="stat-number"><span id="cnt5">20</span><sup>+</sup></div>
+                <div class="stat-label">Active Projects</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     QUICK CITIZEN SERVICES
+===================================================== -->
+<section class="quick-services" aria-labelledby="qs-heading">
+    <div class="container">
+        <div class="section-header-center">
+            <p class="section-tag">One-Click Access</p>
+            <h2 class="section-title section-title-center" id="qs-heading">Citizen Services</h2>
+            <p class="section-subtitle">Quick access to all government services, schemes and resources</p>
+        </div>
+        <div class="services-grid">
+            <a href="#" class="service-card" aria-label="Apply for Grant">
+                <div class="service-icon" style="background:#EEF6FF;color:#003366;">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h4>Apply for Grant / Subsidy</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Track Application">
+                <div class="service-icon" style="background:#FFF3E0;color:#E65100;">
+                    <i class="fas fa-search-location"></i>
+                </div>
+                <h4>Track Application Status</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Download Forms">
+                <div class="service-icon" style="background:#E8F5E9;color:#1B5E20;">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h4>Download Forms &amp; Documents</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="FSSAI Registration">
+                <div class="service-icon" style="background:#F3E5F5;color:#4A148C;">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h4>FSSAI Registration Help</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Tenders">
+                <div class="service-icon" style="background:#E3F2FD;color:#0D47A1;">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h4>Tenders &amp; Procurement</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="RTI">
+                <div class="service-icon" style="background:#FFF8E1;color:#F57F17;">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h4>File RTI Request</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Grievance">
+                <div class="service-icon" style="background:#FCE4EC;color:#880E4F;">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h4>Lodge Grievance</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Industry Registration">
+                <div class="service-icon" style="background:#E0F7FA;color:#006064;">
+                    <i class="fas fa-registered"></i>
+                </div>
+                <h4>Industry Registration</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Annual Reports">
+                <div class="service-icon" style="background:#EFEBE9;color:#3E2723;">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h4>Annual Reports &amp; Publications</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Food Park">
+                <div class="service-icon" style="background:#E8EAF6;color:#1A237E;">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <h4>Mega Food Park Allotment</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="Training">
+                <div class="service-icon" style="background:#F1F8E9;color:#33691E;">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h4>Training &amp; Capacity Building</h4>
+            </a>
+            <a href="#" class="service-card" aria-label="GI Products">
+                <div class="service-icon" style="background:#FFF3E0;color:#BF360C;">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h4>GI Tagged Products Punjab</h4>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     MAIN CONTENT – NEWS + SIDEBAR
+===================================================== -->
+<main id="main-content" class="main-content" role="main">
+    <div class="container">
+        <div class="content-grid">
+
+            <!-- LEFT: NEWS & TENDERS -->
+            <div class="main-left">
+
+                <!-- News & Updates -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-newspaper"></i> Latest News &amp; Updates</h3>
+                        <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <ul class="news-list">
+                            <li>
+                                <div class="news-date"><span>24</span>JAN</div>
+                                <div class="news-text">
+                                    <a href="#">PMFME Scheme applications for 2024-25 are now open. Eligible micro food processing enterprises can apply online <span class="badge-new">NEW</span></a>
+                                    <small><i class="fas fa-tag"></i> Schemes &nbsp; <i class="fas fa-clock"></i> 2 hours ago</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-date"><span>22</span>JAN</div>
+                                <div class="news-text">
+                                    <a href="#">Punjab Food Processing Policy 2024 notified – Key highlights and benefits for investors <span class="badge-new">NEW</span></a>
+                                    <small><i class="fas fa-tag"></i> Policy &nbsp; <i class="fas fa-clock"></i> 2 days ago</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-date"><span>20</span>JAN</div>
+                                <div class="news-text">
+                                    <a href="#">PLI Scheme – Selected beneficiaries list for Round 3 published on Ministry of Food Processing Industries portal</a>
+                                    <small><i class="fas fa-tag"></i> PLI Scheme &nbsp; <i class="fas fa-clock"></i> 4 days ago</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-date"><span>18</span>JAN</div>
+                                <div class="news-text">
+                                    <a href="#">Cold Chain Infrastructure Subsidy scheme – Applications extended till 28 February 2025</a>
+                                    <small><i class="fas fa-tag"></i> Cold Chain &nbsp; <i class="fas fa-clock"></i> 6 days ago</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-date"><span>15</span>JAN</div>
+                                <div class="news-text">
+                                    <a href="#">Training programme on Food Safety, Hygiene &amp; Quality Standards – Registration open for Ludhiana event</a>
+                                    <small><i class="fas fa-tag"></i> Training &nbsp; <i class="fas fa-clock"></i> 9 days ago</small>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-date"><span>12</span>JAN</div>
+                                <div class="news-text">
+                                    <a href="#">Investor Meet – Global Punjab Investors Summit 2025 – Food Processing sector conclave on 10 Feb 2025</a>
+                                    <small><i class="fas fa-tag"></i> Events &nbsp; <i class="fas fa-clock"></i> 12 days ago</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tenders / Notices -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-gavel"></i> Tenders &amp; Notices</h3>
+                        <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <ul class="tender-list">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        Tender for Supply &amp; Installation of Food Testing Laboratory Equipment at DFPP Chandigarh
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> Issued: 20 Jan 2025</span>
+                                            <span><i class="fas fa-hourglass-end"></i> Last Date: 15 Feb 2025</span>
+                                            <span style="color:var(--green-in);font-weight:600;"><i class="fas fa-circle"></i> Open</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        EOI for empanelment of Consultants for Food Processing Cluster Development Programme
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> Issued: 16 Jan 2025</span>
+                                            <span><i class="fas fa-hourglass-end"></i> Last Date: 10 Feb 2025</span>
+                                            <span style="color:var(--green-in);font-weight:600;"><i class="fas fa-circle"></i> Open</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        RFP for IT Software Solution for Online Scheme Management Portal – DFPP Punjab
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> Issued: 10 Jan 2025</span>
+                                            <span><i class="fas fa-hourglass-end"></i> Last Date: 05 Feb 2025</span>
+                                            <span style="color:var(--green-in);font-weight:600;"><i class="fas fa-circle"></i> Open</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        Tender for Printing of Awareness &amp; Promotional Material 2024-25
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> Issued: 02 Jan 2025</span>
+                                            <span><i class="fas fa-hourglass-end"></i> Closed: 25 Jan 2025</span>
+                                            <span style="color:#c00;font-weight:600;"><i class="fas fa-circle"></i> Closed</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Press Releases -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bullhorn"></i> Press Releases &amp; Circulars</h3>
+                        <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card-body">
+                        <ul class="tender-list">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-alt"></i>
+                                    <div>
+                                        Press Release – Punjab CM inaugurates State-of-the-Art Cold Storage Hub at Amritsar
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> 18 Jan 2025</span>
+                                            <span><i class="fas fa-download"></i> Download PDF</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-alt"></i>
+                                    <div>
+                                        Circular – Guidelines for Verification of PMFME Beneficiaries by District Level Committees
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> 14 Jan 2025</span>
+                                            <span><i class="fas fa-download"></i> Download PDF</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-file-alt"></i>
+                                    <div>
+                                        Office Order – Revision of Empanelled Banks list for PMFME credit-linked subsidy
+                                        <div class="tender-meta">
+                                            <span><i class="fas fa-calendar-alt"></i> 08 Jan 2025</span>
+                                            <span><i class="fas fa-download"></i> Download PDF</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- /main-left -->
+
+            <!-- RIGHT: SIDEBAR -->
+            <div class="sidebar">
+
+                <!-- Events -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-calendar-check"></i> Upcoming Events</h3>
+                        <a href="#">All Events</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="event-item">
+                            <div class="event-date-box">
+                                <div class="day">10</div>
+                                <div class="mon">Feb</div>
+                            </div>
+                            <div class="event-info">
+                                <h5>Global Punjab Investors Summit 2025 – Food Processing Conclave</h5>
+                                <small><i class="fas fa-map-marker-alt"></i> Chandigarh</small>
+                                <span class="event-tag">Conference</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date-box">
+                                <div class="day">15</div>
+                                <div class="mon">Feb</div>
+                            </div>
+                            <div class="event-info">
+                                <h5>Food Safety &amp; Quality Training – Ludhiana Batch</h5>
+                                <small><i class="fas fa-map-marker-alt"></i> Ludhiana</small>
+                                <span class="event-tag">Training</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date-box">
+                                <div class="day">22</div>
+                                <div class="mon">Feb</div>
+                            </div>
+                            <div class="event-info">
+                                <h5>District Level FPO Training – Amritsar &amp; Jalandhar</h5>
+                                <small><i class="fas fa-map-marker-alt"></i> Amritsar</small>
+                                <span class="event-tag">Workshop</span>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date-box">
+                                <div class="day">05</div>
+                                <div class="mon">Mar</div>
+                            </div>
+                            <div class="event-info">
+                                <h5>Stakeholder Consultation on Punjab Food Processing Policy 2024</h5>
+                                <small><i class="fas fa-map-marker-alt"></i> Mohali</small>
+                                <span class="event-tag">Consultation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    </div>
+                    <div class="card-body" style="padding:12px 18px;">
+                        <ul class="quick-link-list">
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> MoFPI – Ministry of Food Processing</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> PMFME Official Portal</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> FSSAI – Food Safety</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> Punjab Mandi Board</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> NABARD – Agri Finance</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> APEDA – Export Promotion</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> GeM Portal – Procurement</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> Punjab Govt. Official Portal</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> NIC e-Procurement</a></li>
+                            <li><a href="#"><i class="fas fa-external-link-alt"></i> National Portal of India</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-images"></i> Photo Gallery</h3>
+                        <a href="#">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="gallery-preview">
+                            <div class="gallery-thumb">
+                                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=200&q=70" alt="Food processing facility Punjab" loading="lazy">
+                                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="gallery-thumb">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=70" alt="Modern food plant" loading="lazy">
+                                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="gallery-thumb">
+                                <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=200&q=70" alt="Farmer with produce" loading="lazy">
+                                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="gallery-thumb">
+                                <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=200&q=70" alt="Food packaging unit" loading="lazy">
+                                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="gallery-thumb">
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200&q=70" alt="Food products" loading="lazy">
+                                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                            <div class="gallery-thumb">
+                                <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=200&q=70" alt="Agricultural produce" loading="lazy">
+                                <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Resources -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-folder-open"></i> Key Downloads</h3>
+                        <a href="#">All Files</a>
+                    </div>
+                    <div class="card-body" style="padding:12px 18px;">
+                        <ul class="quick-link-list">
+                            <li><a href="#"><i class="fas fa-file-pdf" style="color:#e53935;"></i> PMFME Application Form</a></li>
+                            <li><a href="#"><i class="fas fa-file-pdf" style="color:#e53935;"></i> Punjab Food Processing Policy 2024</a></li>
+                            <li><a href="#"><i class="fas fa-file-word" style="color:#1565c0;"></i> Subsidy Application Checklist</a></li>
+                            <li><a href="#"><i class="fas fa-file-pdf" style="color:#e53935;"></i> Cold Chain Scheme Guidelines</a></li>
+                            <li><a href="#"><i class="fas fa-file-excel" style="color:#2e7d32;"></i> Beneficiary Master Data 2024</a></li>
+                            <li><a href="#"><i class="fas fa-file-pdf" style="color:#e53935;"></i> Annual Report 2023-24</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- /sidebar -->
+        </div><!-- /content-grid -->
+    </div>
+</main>
+
+<!-- =====================================================
+     SCHEMES SECTION
+===================================================== -->
+<section class="schemes-section" id="schemes" aria-labelledby="schemes-heading">
+    <div class="container">
+        <div class="section-header-center">
+            <p class="section-tag">Government of India &amp; Punjab</p>
+            <h2 class="section-title section-title-center" id="schemes-heading">Schemes &amp; Subsidies</h2>
+            <p class="section-subtitle">Comprehensive support for food processing enterprises – from micro units to large industries</p>
+        </div>
+        <div class="schemes-grid">
+
+            <!-- Scheme 1 -->
+            <div class="scheme-card">
+                <span class="scheme-badge badge-central">Central Scheme</span>
+                <div class="scheme-icon-wrap" style="background:#EEF6FF;color:#003399;">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h4>PM Formalisation of Micro Food Processing Enterprises (PMFME)</h4>
+                <p>Credit-linked subsidy up to ₹10 Lakhs for micro food processing units. Covers upgradation of equipment, packaging, quality standards &amp; marketing.</p>
+                <div class="scheme-highlights">
+                    <span><i class="fas fa-check-circle"></i> 35% credit-linked capital subsidy</span>
+                    <span><i class="fas fa-check-circle"></i> Eligible: SHGs, FPOs, Cooperatives</span>
+                    <span><i class="fas fa-check-circle"></i> Seed capital for SHG members</span>
+                </div>
+                <a href="#" class="scheme-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Scheme 2 -->
+            <div class="scheme-card">
+                <span class="scheme-badge badge-central">Central Scheme</span>
+                <div class="scheme-icon-wrap" style="background:#FFF3E0;color:#E65100;">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h4>Production Linked Incentive (PLI) Scheme for Food Processing</h4>
+                <p>Incentivise manufacturing of food products with global standards. PLI rates of 4–10% on incremental sales for 6 years. Supports large &amp; mid-scale food enterprises.</p>
+                <div class="scheme-highlights">
+                    <span><i class="fas fa-check-circle"></i> 4% to 10% PLI on incremental sales</span>
+                    <span><i class="fas fa-check-circle"></i> Minimum investment ₹10 Cr</span>
+                    <span><i class="fas fa-check-circle"></i> Applicable for 6 years</span>
+                </div>
+                <a href="#" class="scheme-link">Know More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Scheme 3 -->
+            <div class="scheme-card">
+                <span class="scheme-badge badge-central">Central Scheme</span>
+                <div class="scheme-icon-wrap" style="background:#E8F5E9;color:#1B5E20;">
+                    <i class="fas fa-snowflake"></i>
+                </div>
+                <h4>Integrated Cold Chain &amp; Value Addition Infrastructure</h4>
+                <p>Financial assistance for creation of integrated cold chain infrastructure without any break from farm gate to consumer. Covers pre-cooling, cold storage, IQF, CA stores.</p>
+                <div class="scheme-highlights">
+                    <span><i class="fas fa-check-circle"></i> Grant up to ₹10 Cr per project</span>
+                    <span><i class="fas fa-check-circle"></i> 35% of eligible project cost</span>
+                    <span><i class="fas fa-check-circle"></i> Farmer Producers priority</span>
+                </div>
+                <a href="#" class="scheme-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Scheme 4 -->
+            <div class="scheme-card">
+                <span class="scheme-badge badge-central">Central Scheme</span>
+                <div class="scheme-icon-wrap" style="background:#F3E5F5;color:#4A148C;">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <h4>Mega Food Park Scheme</h4>
+                <p>Create modern infrastructure facilities for food processing in close proximity to raw material sources. Phagwara Mega Food Park – plots available for allotment.</p>
+                <div class="scheme-highlights">
+                    <span><i class="fas fa-check-circle"></i> Grant up to ₹50 Crore per park</span>
+                    <span><i class="fas fa-check-circle"></i> Common processing facilities</span>
+                    <span><i class="fas fa-check-circle"></i> 30+ food processing units</span>
+                </div>
+                <a href="#" class="scheme-link">Allotment Details <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Scheme 5 -->
+            <div class="scheme-card">
+                <span class="scheme-badge badge-state">State Scheme</span>
+                <div class="scheme-icon-wrap" style="background:#E0F7FA;color:#006064;">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h4>Punjab State Capital Subsidy Scheme for Food Processing</h4>
+                <p>State government subsidy for new food processing units and technology upgradation. Additional top-up on central schemes for Punjab-domiciled entrepreneurs.</p>
+                <div class="scheme-highlights">
+                    <span><i class="fas fa-check-circle"></i> 15% additional state subsidy</span>
+                    <span><i class="fas fa-check-circle"></i> SC/Women entrepreneurs – extra 5%</span>
+                    <span><i class="fas fa-check-circle"></i> MSME units priority</span>
+                </div>
+                <a href="#" class="scheme-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Scheme 6 -->
+            <div class="scheme-card">
+                <span class="scheme-badge badge-new-s">New Scheme</span>
+                <div class="scheme-icon-wrap" style="background:#FFF8E1;color:#F57F17;">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>One District One Product (ODOP) – Food Processing</h4>
+                <p>Promote speciality food products unique to each of Punjab's 23 districts. Special branding, marketing support and GI tagging assistance for traditional food products.</p>
+                <div class="scheme-highlights">
+                    <span><i class="fas fa-check-circle"></i> 23 districts covered</span>
+                    <span><i class="fas fa-check-circle"></i> GI tagging support</span>
+                    <span><i class="fas fa-check-circle"></i> National &amp; export market linkage</span>
+                </div>
+                <a href="#" class="scheme-link">Explore ODOP <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+
+        <!-- Scheme CTA -->
+        <div style="text-align:center;margin-top:34px;">
+            <a href="#" class="btn-primary" style="display:inline-flex;">
+                <i class="fas fa-th-list"></i> View All Schemes &amp; Eligibility
+            </a>
+            &nbsp;&nbsp;
+            <a href="#" class="btn-primary" style="background:var(--green-in);border-color:var(--green-in);display:inline-flex;">
+                <i class="fas fa-calculator"></i> Subsidy Calculator
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     ABOUT SECTION
+===================================================== -->
+<section class="about-section" id="about" aria-labelledby="about-heading">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="section-tag" style="color:var(--saffron);">Who We Are</p>
+                <h2 id="about-heading">Directorate of Food Processing, Punjab</h2>
+                <p class="about-sub">Department of Agriculture &amp; Farmers' Welfare, Government of Punjab</p>
+                <p>The Directorate of Food Processing, Punjab (DFPP) is a nodal agency under the Department of Agriculture &amp; Farmers' Welfare, Government of Punjab. Established to boost the food processing industry in the state, DFPP works towards creating a robust ecosystem for food processing enterprises ranging from micro-level units to large industries.</p>
+                <p>Punjab, the food bowl of India, produces a significant share of the nation's wheat, rice, and dairy. DFPP harnesses this agricultural strength to build a vibrant food processing sector that adds value to farm produce, reduces post-harvest losses, and generates employment for rural communities.</p>
+                <p>We serve as the single-window facilitator for all central and state government schemes related to food processing, connecting entrepreneurs with financial assistance, technology, infrastructure, and market access.</p>
+                <div class="about-features">
+                    <div class="about-feature"><i class="fas fa-check-circle"></i> Single Window Facilitation for all food processing schemes</div>
+                    <div class="about-feature"><i class="fas fa-check-circle"></i> Nodal agency for PMFME &amp; PLI Schemes</div>
+                    <div class="about-feature"><i class="fas fa-check-circle"></i> Cold Chain &amp; Food Park Infrastructure development</div>
+                    <div class="about-feature"><i class="fas fa-check-circle"></i> Skill development &amp; entrepreneurship support</div>
+                    <div class="about-feature"><i class="fas fa-check-circle"></i> Promotion of GI-tagged Punjab food products</div>
+                    <div class="about-feature"><i class="fas fa-check-circle"></i> Export market linkage for food enterprises</div>
+                </div>
+                <div style="margin-top:28px;">
+                    <a href="#" class="btn-primary"><i class="fas fa-info-circle"></i> About the Directorate</a>
+                    <a href="#" class="btn-secondary"><i class="fas fa-sitemap"></i> Org. Structure</a>
+                </div>
+            </div>
+
+            <div class="vm-cards">
+                <div class="vm-card">
+                    <h4><i class="fas fa-eye"></i> Our Vision</h4>
+                    <p>To make Punjab a leading state in food processing by 2030 — creating a world-class, technology-driven food value chain that empowers farmers, entrepreneurs, and workers while positioning Punjab's food products globally.</p>
+                </div>
+                <div class="vm-card">
+                    <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                    <ul class="vm-list">
+                        <li>Promote and support food processing investments in Punjab</li>
+                        <li>Reduce post-harvest losses through cold chain infrastructure</li>
+                        <li>Facilitate credit, subsidy &amp; technical support for food enterprises</li>
+                        <li>Develop skilled human resource for the food processing sector</li>
+                        <li>Enhance farmer income through better market linkages</li>
+                    </ul>
+                </div>
+                <div class="vm-card">
+                    <h4><i class="fas fa-chart-line"></i> Punjab Food Economy</h4>
+                    <p>Punjab contributes <strong style="color:var(--saffron);">~18% of India's wheat</strong> and <strong style="color:var(--saffron);">~11% of rice</strong> production. The state has immense potential to become a global food processing hub with targeted investment &amp; policy support.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     IMPORTANT LINKS
+===================================================== -->
+<section class="imp-links" aria-labelledby="imp-links-heading">
+    <div class="container">
+        <div class="section-header-center">
+            <p class="section-tag">External Resources</p>
+            <h2 class="section-title section-title-center" id="imp-links-heading">Important Links</h2>
+            <p class="section-subtitle">Key government portals and resources for the food processing sector</p>
+        </div>
+        <div class="links-grid">
+            <div class="link-col">
+                <h4><i class="fas fa-landmark"></i> Central Government</h4>
+                <ul>
+                    <li><a href="#">Ministry of Food Processing Industries (MoFPI)</a></li>
+                    <li><a href="#">PMFME Official Portal</a></li>
+                    <li><a href="#">PLI for Food Processing</a></li>
+                    <li><a href="#">FSSAI – Food Safety Authority</a></li>
+                    <li><a href="#">APEDA – Export Promotion</a></li>
+                    <li><a href="#">NAFED</a></li>
+                    <li><a href="#">National Portal of India</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h4><i class="fas fa-flag"></i> Punjab Government</h4>
+                <ul>
+                    <li><a href="#">Punjab Government Official Portal</a></li>
+                    <li><a href="#">Dept. of Agriculture Punjab</a></li>
+                    <li><a href="#">Punjab Mandi Board</a></li>
+                    <li><a href="#">PEDA – Energy Development</a></li>
+                    <li><a href="#">Invest Punjab (PBIP)</a></li>
+                    <li><a href="#">Punjab Bureau of Investment Promotion</a></li>
+                    <li><a href="#">Punjab Agro Industries Corp.</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h4><i class="fas fa-university"></i> Finance &amp; Banking</h4>
+                <ul>
+                    <li><a href="#">NABARD – Agriculture Finance</a></li>
+                    <li><a href="#">SIDBI – MSME Finance</a></li>
+                    <li><a href="#">Punjab National Bank – Agri Loans</a></li>
+                    <li><a href="#">SBI – MSME Schemes</a></li>
+                    <li><a href="#">NSIC – Support for MSME</a></li>
+                    <li><a href="#">CGTMSE – Credit Guarantee</a></li>
+                </ul>
+            </div>
+            <div class="link-col">
+                <h4><i class="fas fa-tools"></i> Tools &amp; Resources</h4>
+                <ul>
+                    <li><a href="#">GeM Portal – Government Procurement</a></li>
+                    <li><a href="#">Udyam Registration – MSME</a></li>
+                    <li><a href="#">e-Sanjeevani – Helpline</a></li>
+                    <li><a href="#">CPGRAMS – Grievance Portal</a></li>
+                    <li><a href="#">NIC e-Procurement Portal</a></li>
+                    <li><a href="#">DigiLocker – Document Storage</a></li>
+                    <li><a href="#">India Trade Portal – DGFT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     MEDIA SECTION
+===================================================== -->
+<section class="media-section" aria-labelledby="media-heading">
+    <div class="container">
+        <div class="section-header-center">
+            <p class="section-tag">Visual Updates</p>
+            <h2 class="section-title section-title-center" id="media-heading">Media Gallery</h2>
+            <p class="section-subtitle">Photos and videos from events, inaugurations and field activities</p>
+        </div>
+        <div class="media-tabs" role="tablist" aria-label="Media tabs">
+            <button class="tab-btn active" onclick="switchTab('photos',this)" role="tab" aria-selected="true" aria-controls="tab-photos">
+                <i class="fas fa-images"></i> Photo Gallery
+            </button>
+            <button class="tab-btn" onclick="switchTab('videos',this)" role="tab" aria-selected="false" aria-controls="tab-videos">
+                <i class="fas fa-video"></i> Video Gallery
+            </button>
+        </div>
+
+        <!-- Photos -->
+        <div class="tab-pane active" id="tab-photos" role="tabpanel">
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400&q=75" alt="Punjab wheat harvest" loading="lazy">
+                    <div class="photo-caption">Wheat harvest – Punjab farms</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&q=75" alt="Food processing unit" loading="lazy">
+                    <div class="photo-caption">Food processing facility</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=400&q=75" alt="Packaging unit" loading="lazy">
+                    <div class="photo-caption">Modern packaging unit</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=75" alt="Food products" loading="lazy">
+                    <div class="photo-caption">Punjab's food products</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=400&q=75" alt="Training programme" loading="lazy">
+                    <div class="photo-caption">Entrepreneurship training session</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&q=75" alt="Cold storage" loading="lazy">
+                    <div class="photo-caption">Cold storage infrastructure</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=400&q=75" alt="Dairy products" loading="lazy">
+                    <div class="photo-caption">Dairy processing unit</div>
+                </div>
+                <div class="photo-item">
+                    <img src="https://images.unsplash.com/photo-1454944338482-a69bb95894af?w=400&q=75" alt="Investor meet" loading="lazy">
+                    <div class="photo-caption">Investor conclave 2024</div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:26px;">
+                <a href="#" class="btn-primary" style="display:inline-flex;background:var(--navy);border-color:var(--navy);">
+                    <i class="fas fa-images"></i> View Full Gallery
+                </a>
+            </div>
+        </div>
+
+        <!-- Videos -->
+        <div class="tab-pane" id="tab-videos" role="tabpanel">
+            <div class="video-grid">
+                <div class="video-item">
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&q=70" alt="Video thumbnail – PMFME Scheme overview" loading="lazy">
+                    <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-title">PMFME Scheme – How to Apply (Explainer)</div>
+                </div>
+                <div class="video-item">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&q=70" alt="Video thumbnail – Cold Chain" loading="lazy">
+                    <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-title">Cold Chain Infrastructure – Punjab Success Story</div>
+                </div>
+                <div class="video-item">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&q=70" alt="Video thumbnail – Punjab Food Economy" loading="lazy">
+                    <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-title">Punjab Food Processing – Investor Opportunity 2025</div>
+                </div>
+                <div class="video-item">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500&q=70" alt="Video thumbnail – Mega Food Park" loading="lazy">
+                    <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-title">Mega Food Park Phagwara – Virtual Tour</div>
+                </div>
+                <div class="video-item">
+                    <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=500&q=70" alt="Video thumbnail – SHG women" loading="lazy">
+                    <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-title">Women SHG Entrepreneurs – PMFME Success Stories</div>
+                </div>
+                <div class="video-item">
+                    <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500&q=70" alt="Video thumbnail – Training" loading="lazy">
+                    <div class="play-btn"><i class="fas fa-play-circle"></i></div>
+                    <div class="video-title">Food Safety Training Programme – Highlights</div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:26px;">
+                <a href="#" class="btn-primary" style="display:inline-flex;background:var(--navy);border-color:var(--navy);">
+                    <i class="fab fa-youtube"></i> View YouTube Channel
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     GRIEVANCE BANNER
+===================================================== -->
+<div class="grievance-banner" role="complementary" aria-label="Grievance redressal">
+    <div class="container">
+        <div class="grievance-inner">
+            <div class="grievance-text">
+                <h3><i class="fas fa-headset"></i> &nbsp;Grievance Redressal &amp; Helpline</h3>
+                <p>Have a complaint, feedback or query about schemes &amp; services? Connect with us through our grievance portal or Toll-Free helpline.</p>
+            </div>
+            <div class="grievance-actions">
+                <a href="#" class="btn-white"><i class="fas fa-plus-circle"></i> Lodge Grievance</a>
+                <a href="#" class="btn-outline-w"><i class="fas fa-search"></i> Track Complaint</a>
+                <a href="tel:1800XXXXXXX" class="btn-outline-w"><i class="fas fa-phone-alt"></i> 1800-XXX-XXXX (Toll Free)</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- =====================================================
+     CONTACT SECTION
+===================================================== -->
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+        <div class="section-header-center">
+            <p class="section-tag">Get In Touch</p>
+            <h2 class="section-title section-title-center" id="contact-heading">Contact Us</h2>
+            <p class="section-subtitle">Reach out to us for scheme queries, information or general assistance</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Left: Info Cards + Map -->
+            <div>
+                <div class="contact-info-grid">
+                    <div class="contact-info-card">
+                        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Office Address</h4>
+                        <p>Directorate of Food Processing<br>Punjab, SCO – 66, Sector 17-C<br>Chandigarh – 160 017</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="ci-icon"><i class="fas fa-phone-alt"></i></div>
+                        <h4>Phone &amp; Fax</h4>
+                        <p>
+                            <a href="tel:01722703591">0172-270-3591</a><br>
+                            <a href="tel:01722703592">0172-270-3592</a><br>
+                            Fax: 0172-270-3593
+                        </p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email</h4>
+                        <p>
+                            <a href="mailto:dir.foodprocessing@punjab.gov.in">dir.foodprocessing@<br>punjab.gov.in</a><br>
+                            <small>Response within 3 working days</small>
+                        </p>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="ci-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Office Hours</h4>
+                        <p>Monday to Friday<br>9:00 AM – 5:00 PM<br><small>Closed on Govt. Holidays</small></p>
+                    </div>
+                </div>
+                <!-- Map Placeholder -->
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>SCO-66, Sector 17-C, Chandigarh</span>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener" style="color:var(--navy);font-size:13px;font-weight:600;display:flex;align-items:center;gap:5px;">
+                        <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="contact-form-wrap">
+                <h3><i class="fas fa-paper-plane" style="color:var(--orange);"></i> Send Us a Message</h3>
+                <form action="#" method="post" novalidate aria-label="Contact form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cf-name">Full Name <span style="color:red;">*</span></label>
+                            <input type="text" id="cf-name" name="name" placeholder="Your full name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-mobile">Mobile Number <span style="color:red;">*</span></label>
+                            <input type="tel" id="cf-mobile" name="mobile" placeholder="+91 XXXXX XXXXX" required autocomplete="tel">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-email">Email Address</label>
+                        <input type="email" id="cf-email" name="email" placeholder="yourname@example.com" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-subject">Subject <span style="color:red;">*</span></label>
+                        <select id="cf-subject" name="subject" required>
+                            <option value="">-- Select Subject --</option>
+                            <option>PMFME Scheme Query</option>
+                            <option>PLI Scheme Information</option>
+                            <option>Cold Chain Subsidy</option>
+                            <option>State Subsidy Scheme</option>
+                            <option>Mega Food Park Allotment</option>
+                            <option>FSSAI Registration Help</option>
+                            <option>Training Programme</option>
+                            <option>General Inquiry</option>
+                            <option>Grievance / Complaint</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-district">District</label>
+                        <select id="cf-district" name="district">
+                            <option value="">-- Select District --</option>
+                            <option>Amritsar</option><option>Barnala</option>
+                            <option>Bathinda</option><option>Faridkot</option>
+                            <option>Fatehgarh Sahib</option><option>Fazilka</option>
+                            <option>Ferozepur</option><option>Gurdaspur</option>
+                            <option>Hoshiarpur</option><option>Jalandhar</option>
+                            <option>Kapurthala</option><option>Ludhiana</option>
+                            <option>Mansa</option><option>Moga</option>
+                            <option>Mohali (SAS Nagar)</option><option>Muktsar</option>
+                            <option>Nawanshahr</option><option>Pathankot</option>
+                            <option>Patiala</option><option>Rupnagar</option>
+                            <option>Sangrur</option><option>Tarn Taran</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cf-message">Message <span style="color:red;">*</span></label>
+                        <textarea id="cf-message" name="message" placeholder="Please describe your query or message in detail…" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Captcha Verification <span style="color:red;">*</span></label>
+                        <div class="captcha-row">
+                            <span class="captcha-code" id="captchaCode" aria-label="Captcha code">X4K9P2</span>
+                            <button type="button" class="captcha-refresh" onclick="refreshCaptcha()" aria-label="Refresh captcha"><i class="fas fa-sync-alt"></i></button>
+                            <input type="text" placeholder="Enter code above" style="flex:1;" aria-label="Enter captcha code" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        <i class="fas fa-paper-plane"></i> Submit Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer class="site-footer" role="contentinfo" id="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <div class="footer-brand-logo">
+                    <!-- Mini Emblem -->
+                    <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                        <circle cx="50" cy="50" r="48" fill="#001f42" stroke="#FF9933" stroke-width="2.5"/>
+                        <text x="50" y="38" text-anchor="middle" font-size="22" fill="#FF9933">🦁</text>
+                        <circle cx="50" cy="60" r="10" fill="none" stroke="#FF9933" stroke-width="1.8"/>
+                        <line x1="50" y1="50" x2="50" y2="70" stroke="#FF9933" stroke-width=".9"/>
+                        <line x1="40" y1="55" x2="60" y2="65" stroke="#FF9933" stroke-width=".9"/>
+                        <line x1="60" y1="55" x2="40" y2="65" stroke="#FF9933" stroke-width=".9"/>
+                        <line x1="40" y1="60" x2="60" y2="60" stroke="#FF9933" stroke-width=".9"/>
+                        <text x="50" y="82" text-anchor="middle" font-size="5.5" fill="#FF9933" font-family="Arial">सत्यमेव जयते</text>
+                    </svg>
+                    <div>
+                        <h3>Directorate of Food Processing<br>Punjab</h3>
+                        <p style="font-size:12px;color:rgba(255,255,255,.5);margin-top:2px;">Government of Punjab</p>
+                    </div>
+                </div>
+                <p>Nodal agency for food processing industry promotion in Punjab. We facilitate schemes, subsidies, infrastructure and policy support for micro to large food enterprises.</p>
+                <div class="contact-strip">
+                    <span><i class="fas fa-map-marker-alt"></i> SCO-66, Sector 17-C, Chandigarh – 160017</span>
+                    <span><i class="fas fa-phone-alt"></i> <a href="tel:01722703591" style="color:rgba(255,255,255,.7);">0172-270-3591</a></span>
+                    <span><i class="fas fa-envelope"></i> <a href="mailto:dir.foodprocessing@punjab.gov.in" style="color:rgba(255,255,255,.7);">dir.foodprocessing@punjab.gov.in</a></span>
+                    <span><i class="fas fa-globe"></i> www.foodprocessingpunjab.gov.in</span>
+                </div>
+                <div class="footer-social" aria-label="Social media">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About the Directorate</a></li>
+                    <li><a href="#">Schemes &amp; Subsidies</a></li>
+                    <li><a href="#">Citizen Services</a></li>
+                    <li><a href="#">Tenders</a></li>
+                    <li><a href="#">RTI Disclosure</a></li>
+                    <li><a href="#">Photo Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Schemes -->
+            <div class="footer-col">
+                <h4>Key Schemes</h4>
+                <ul>
+                    <li><a href="#">PMFME Scheme</a></li>
+                    <li><a href="#">PLI for Food Processing</a></li>
+                    <li><a href="#">Cold Chain Scheme</a></li>
+                    <li><a href="#">Mega Food Park</a></li>
+                    <li><a href="#">State Capital Subsidy</a></li>
+                    <li><a href="#">ODOP Scheme</a></li>
+                    <li><a href="#">FPO/SHG Support</a></li>
+                    <li><a href="#">Food Cluster Development</a></li>
+                </ul>
+            </div>
+
+            <!-- Policies & Info -->
+            <div class="footer-col">
+                <h4>Policies &amp; Info</h4>
+                <ul>
+                    <li><a href="#">Website Policies</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Accessibility Statement</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Hyperlinking Policy</a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+                    <li><a href="#">Help &amp; FAQ</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Bottom Bar -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-inner">
+                <p>© 2025 Directorate of Food Processing, Punjab. All Rights Reserved. | Designed, Developed &amp; Hosted by <a href="https://www.nic.in" target="_blank" rel="noopener" style="color:var(--saffron);">NIC Punjab</a></p>
+                <div class="footer-links-bottom">
+                    <a href="#">Sitemap</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Privacy Policy</a>
